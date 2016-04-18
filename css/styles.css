@@ -1,0 +1,11 @@
+body
+{
+	background-image: url(../img/background.jpg);
+}
+
+#logo
+{
+	height: 150px;
+	width: 1030px;
+	background-image: url(../img/logo.png);
+}

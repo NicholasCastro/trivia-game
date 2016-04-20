@@ -32,23 +32,21 @@ $(document).ready(function() {
 	}
 
 	function removequestion1(){
-		$("#question1").addClass("flipOutX");
-	}
-
-	function hidequestion1(){
-		$("#question1").hide();
+		$("#question1").detach();
 	}
 
 	function showresults1(){
-		$("#result1").show().addClass("animated flipInX");
+		
 	}
 
 	function answerCheck1(){
 		if(answer1 === correct1){
 			console.log("player answer 1 is correct")
+			$("#result1correct").show().addClass("animated flipInX");
 		}
 		else{
 			console.log("player answer 1 is incorrect")
+			$("#result1incorrect").show().addClass("animated flipInX");
 		}
 	}
 
@@ -70,10 +68,9 @@ $(document).ready(function() {
 		answer1 = $("#answer1-input").val().trim(); //set variable answer1 to value of #answer1-input, removing unnecessary spaces
 		console.log(answer1); //tell console to display variable answer1
 		$("#show-answer1").text(answer1); //set the text of #show-answer1 to variable answer1
-		removequestion1()
-		setTimeout(hidequestion1, 2000);
-		setTimeout(showresults1, 1000);
-		answerCheck1(); 
+		$("#question1").addClass("flipOutX");
+		setTimeout(removequestion1, 1000);
+		setTimeout(answerCheck1, 1500); 
 	});
 
 	

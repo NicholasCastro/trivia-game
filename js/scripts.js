@@ -5,6 +5,8 @@ $(document).ready(function() {
 	var answer1 = "";
 	var trueanswer1 = "";
 	var correct1 = "chell";
+	var answer2 = "";
+	var correct 2 = "GlaD0s";
 	var score = 0;
 	var lives = 3;
 
@@ -114,6 +116,17 @@ $(document).ready(function() {
 		$("#result1incorrect").addClass("flipOutX");
 		setTimeout(removeincorrect1, 1000);
 		setTimeout(showquestion2, 1500);
+	});
+
+	//on answer2 button click
+	$("#answer2-button").on("click", function(e) { //when #answer1-button is clicked, initiate this function
+		e.preventDefault(); //prevent default action
+		answer2 = $("#answer1-input").val().trim()//set variable answer1 to value of #answer1-input, removing unnecessary spaces
+		console.log("Player answer is " + answer2)
+		$("#show-answer2").text(answer2); //set the text of #show-answer1 to variable answer1
+		$("#question2").addClass("flipOutX");
+		setTimeout(removequestion2, 1000);
+		setTimeout(answerCheck2, 1500); 
 	});
 
 });

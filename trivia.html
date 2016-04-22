@@ -49,21 +49,33 @@
 
 		<!-- Question 1 Start -->
 		<div id="question1" class="row questions">
-			<div class="col s12">
-				<h4>1. What is the name of the silent player controlled character?</h4>
+			<div class="row">
+				<div class="col s6">
+					<div class="card small">
+			            <div class="card-image">
+			              <img src="img/chell.jpg">
+			              <span class="card-title">Qustion 1</span>
+			            </div>
+			            <div class="card-content">
+			              <h4>1. What is the name of the silent player controlled character?</h4>
+			            </div>
+		            </div>
+				</div>
+				<form>
+					<div class="input-field col s6">
+						<div class="card-panel teal">
+           					 <input id="answer1-input" type="text" placeholder="Type your answer here">
+						     <label class="active" for="answer1-input">Answer:</label>
+						     <button type="submit" id="answer1-button" class="waves-effect waves-light btn">Submit</button>
+        				</div>    
+					</div>
+				</form>
 			</div>
-			<form>
-				<div class="input-field col s6">
-				      <input id="answer1-input" type="text" placeholder="Type your answer here">
-				      <label class="active" for="answer1-input">Answer:</label>
-				      <button type="submit" id="answer1-button" class="waves-effect waves-light btn">Submit</button>
-			    </div>
-			</form>
 		</div>
 		<!-- Results 1 correct Start -->
 			<div id="result1correct" class="row results">
 				<div class="col s12">
-					<h5 class="light-blue-text text-darken-1">You answered: <span id="show-answer1"></span></h5>
+					<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer1"></span></h5>
 				</div>
 				<div class="col s12">
 					<h5 class="orange-text text-accent-4">Your answer was <span class="green-text">CORRECT!</span></h5>
@@ -77,7 +89,7 @@
 		<!-- Results 1 incorrect Start -->
 			<div id="result1incorrect" class="row results">
 				<div class="col s12">
-					<h5 class="light-blue-text text-darken-1">You answered: <span id="show-answer1"></span></h5>
+					<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer1"></span></h5>
 				</div>
 				<div class="col s12">
 					<h5 class="orange-text text-accent-4">Your answer was <span class="red-text">INCORRECT!</span></h5>
@@ -107,7 +119,7 @@
 		<!-- Results 2 correct Start -->
 			<div id="result2correct" class="row results">
 				<div class="col s12">
-					<h5 class="light-blue-text text-darken-1">You answered: <span id="show-answer2"></span></h5>
+					<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer2"></span></h5>
 				</div>
 				<div class="col s12">
 					<h5 class="orange-text text-accent-4">Your answer was <span class="green-text">CORRECT!</span></h5>
@@ -115,13 +127,13 @@
 				<div class="col s12">
 				<img src="img/correct.png">
 				</div>
-				<button type="submit" id="continue2" class="waves-effect waves-light btn">Continue</button>
+				<button type="submit" id="continuecorrect2" class="waves-effect waves-light btn">Continue</button>
 			</div>
 		<!-- Results 2 correct End -->
 		<!-- Results 2 incorrect Start -->
 			<div id="result2incorrect" class="row results">
 				<div class="col s12">
-					<h5 class="light-blue-text text-darken-1">You answered: <span id="show-answer2"></span></h5>
+					<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer2"></span></h5>
 				</div>
 				<div class="col s12">
 					<h5 class="orange-text text-accent-4">Your answer was <span class="red-text">INCORRECT!</span></h5>
@@ -129,11 +141,54 @@
 				<div class="col s12">
 				<img src="img/wrong.png">
 				</div>
-				<button type="submit" id="continue2" class="waves-effect waves-light btn">Continue</button>
+				<button type="submit" id="continueincorrect2" class="waves-effect waves-light btn">Continue</button>
 			</div>
 		<!-- Results 2 incorrect End -->
 		<!-- Question 2 End -->
 
+
+		<!-- Question 3 Start -->
+		<div id="question3" class="row questions">
+			<div class="col s12">
+				<h4>3. Who is the voice actor for the antagonist in question 2?</h4>
+			</div>
+			<form>
+				<div class="input-field col s6">
+				      <input id="answer3-input" type="text" placeholder="Type your answer here">
+				      <label class="active" for="answer3-input">Answer:</label>
+				      <button type="submit" id="answer3-button" class="waves-effect waves-light btn">Submit</button>
+			    </div>
+			</form>
+		</div>
+		<!-- Results 3 correct Start -->
+			<div id="result3correct" class="row results">
+				<div class="col s12">
+					<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer3"></span></h5>
+				</div>
+				<div class="col s12">
+					<h5 class="orange-text text-accent-4">Your answer was <span class="green-text">CORRECT!</span></h5>
+				</div>
+				<div class="col s12">
+				<img src="img/correct.png">
+				</div>
+				<button type="submit" id="continuecorrect3" class="waves-effect waves-light btn">Continue</button>
+			</div>
+		<!-- Results 3 correct End -->
+		<!-- Results 3 incorrect Start -->
+			<div id="result3incorrect" class="row results">
+				<div class="col s12">
+					<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer3"></span></h5>
+				</div>
+				<div class="col s12">
+					<h5 class="orange-text text-accent-4">Your answer was <span class="red-text">INCORRECT!</span></h5>
+				</div>
+				<div class="col s12">
+				<img src="img/wrong.png">
+				</div>
+				<button type="submit" id="continueincorrect3" class="waves-effect waves-light btn">Continue</button>
+			</div>
+		<!-- Results 3 incorrect End -->
+		<!-- Question 3 End -->
 
 
 		<!-- Win / Lose Messages -->

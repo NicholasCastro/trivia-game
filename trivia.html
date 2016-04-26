@@ -4,16 +4,18 @@
 	<title></title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
  <main>
  	<div class="container">
 		<div class="row">
-			 <div class="col s12">
-			 		<h1>Welcome to Trivia!</h1>
+			 <div id="logo" class="col s12">
+			 		<h5><h5>
 			 		<!-- Place directions here -->
 			 </div>
 		</div>
+
 		<!-- Welcome Screen Start -->
 		<div id="welcome-screen">
 			<div class="row">
@@ -31,40 +33,692 @@
 				</div>
 			</form>
 		</div>
-		<!-- Welcome Screen Start -->
+		<!-- Welcome Screen end -->
+
 		<!-- Dashboard Start -->
 			<div class="row">
 				<div class="col s12">
 					<div id="dashboard">
-						<h3 id="player-name">Player Name</h3>
+						<h3>Test Subject: <span id="player-name">Player Name</span></h3>
+						<h3>Score: <span id="score">0</span></h3>
+						<h3>Lives:<span id="lifecounter">3</span></h3>
 					</div>
 				</div>
 			</div>
 		<!-- Dasboard End -->
+
 		<!-- Question 1 Start -->
 		<div id="question1" class="row questions">
-			<div class="col s12">
-				<h4>1. Question 1</h4>
+			<div class="row">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/chell.jpg">
+			              <span class="card-title">Qustion 1</span>
+			            </div>
+			            <div class="card-content">
+			              <h5>1. What is the name of the silent player controlled character?</h5>
+			            </div>
+		            </div>
+				</div>
+				<form>
+					<div class="input-field col s6">
+						<div class="card-panel teal">
+           					 <input id="answer1-input" type="text" placeholder="Type your answer here">
+						     <label class="active" for="answer1-input">Answer:</label>
+						     <button type="submit" id="answer1-button" class="waves-effect waves-light btn">Submit</button>
+        				</div>    
+					</div>
+				</form>
 			</div>
-			<form>
+		</div>
+		<!-- Results 1 correct Start -->
+			<div id="result1correct" class="row results">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/correct.png">
+			              <span class="card-title">Results</span>
+			            </div>
+			            <div class="card-content">
+								<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer1"></span></h5>
+								<h5 class="orange-text text-accent-4">Your answer was <span class="green-text">CORRECT!</span></h5>
+								<button type="submit" id="continuecorrect1" class="waves-effect waves-light btn">Continue</button>
+							</div>
+			            </div>
+			        </div>
+			</div>
+		<!-- Results 1 correct End -->
+		<!-- Results 1 incorrect Start -->
+			<div id="result1incorrect" class="row results">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/wrong.png">
+			              <span class="card-title">Results</span>
+			            </div>
+			            <div class="card-content">
+								<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer1"></span></h5>
+								<h5 class="orange-text text-accent-4">Your answer was <span class="red-text">INCORRECT!</span></h5>
+								<button type="submit" id="continueincorrect1" class="waves-effect waves-light btn">Continue</button>
+							</div>
+			            </div>
+			        </div>
+				</div>
+		<!-- Results 1 incorrect End -->
+		<!-- Question 1 End -->
+
+
+		<!-- Question 2 Start -->
+		<div id="question2" class="row questions">
+			<div class="row">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/glados.jpg">
+			              <span class="card-title">Qustion 2</span>
+			            </div>
+			            <div class="card-content">
+			              <h5>2. What is the name of the first game's robotic antagonist? (Must be capitalized correctly)</h5>
+			            </div>
+		            </div>
+				</div>
+				<form>
+					<div class="input-field col s6">
+						<div class="card-panel teal">
+					      <input id="answer2-input" type="text" placeholder="Type your answer here">
+					      <label class="active" for="answer2-input">Answer:</label>
+					      <button type="submit" id="answer2-button" class="waves-effect waves-light btn">Submit</button>
+					    </div>
+				    </div>
+				</form>
+			</div>
+		</div>
+		<!-- Results 2 correct Start -->
+			<div id="result2correct" class="row results">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/correct.png">
+			              <span class="card-title">Results</span>
+			            </div>
+			            <div class="card-content">
+								<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer2"></span></h5>
+								<h5 class="orange-text text-accent-4">Your answer was <span class="green-text">CORRECT!</span></h5>
+								<button type="submit" id="continuecorrect2" class="waves-effect waves-light btn">Continue</button>
+							</div>
+			            </div>
+			        </div>
+			</div>
+
+		<!-- Results 2 correct End -->
+		<!-- Results 2 incorrect Start -->
+			<div id="result2incorrect" class="row results">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/wrong.png">
+			              <span class="card-title">Results</span>
+			            </div>
+			            <div class="card-content">
+								<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer2"></span></h5>
+								<h5 class="orange-text text-accent-4">Your answer was <span class="red-text">INCORRECT!</span></h5>
+								<button type="submit" id="continueincorrect2" class="waves-effect waves-light btn">Continue</button>
+							</div>
+			            </div>
+			        </div>		
+			</div>
+		<!-- Results 2 incorrect End -->
+		<!-- Question 2 End -->
+
+
+		<!-- Question 3 Start -->
+		<div id="question3" class="row questions">
+			<div class="col s6">
+				<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/ellen.jpg">
+			              <span class="card-title">Qustion 3</span>
+			            </div>
+			            <div class="card-content">
+			              <h5>3. Who is the voice actor for the antagonist in question 2?</h5>
+			            </div>
+		            </div>
+				</div>
+				<form>
 				<div class="input-field col s6">
-				      <input id="answer1-input" type="text" placeholder="Type your answer here">
-				      <label class="active" for="answer1-input">Answer:</label>
-				      <button type="submit" id="answer1-button" class="waves-effect waves-light btn">Submit</button>
+					<div class="card-panel teal">
+				      <input id="answer3-input" type="text" placeholder="Type your answer here">
+				      <label class="active" for="answer3-input">Answer:</label>
+				      <button type="submit" id="answer3-button" class="waves-effect waves-light btn">Submit</button>
+				    </div>
 			    </div>
 			</form>
 		</div>
-		<!-- Results 1 Start -->
-			<div id="result1" class="row results">
-				<div class="col s12">
-					<h5>You answered: <span id="show-answer1"></span></h5>
-				</div>
-				<div class="col s12">
-					<h5>The correct answer is: correct1</h5>
-				</div>
+		<!-- Results 3 correct Start -->
+			<div id="result3correct" class="row results">
+			<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/correct.png">
+			              <span class="card-title">Results</span>
+			            </div>
+			            <div class="card-content">
+								<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer3"></span></h5>
+								<h5 class="orange-text text-accent-4">Your answer was <span class="green-text">CORRECT!</span></h5>
+								<button type="submit" id="continuecorrect3" class="waves-effect waves-light btn">Continue</button>
+							</div>
+			            </div>
+			        </div>
 			</div>
-		<!-- Results 1 End -->
-		<!-- Question 1 End -->
+		<!-- Results 3 correct End -->
+		<!-- Results 3 incorrect Start -->
+			<div id="result3incorrect" class="row results">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/wrong.png">
+			              <span class="card-title">Results</span>
+			            </div>
+			            <div class="card-content">
+								<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer3"></span></h5>
+								<h5 class="orange-text text-accent-4">Your answer was <span class="red-text">INCORRECT!</span></h5>
+								<button type="submit" id="continueincorrect3" class="waves-effect waves-light btn">Continue</button>
+							</div>
+			            </div>
+			        </div>			
+			</div>
+		<!-- Results 3 incorrect End -->
+		<!-- Question 3 End -->
+
+		<!-- Question 4 Start -->
+		<div id="question4" class="row questions">
+			<div class="row">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/companion.jpg">
+			              <span class="card-title">Qustion 4</span>
+			            </div>
+			            <div class="card-content">
+			              <h5>4. What is the name of the achievement for incinerating the companion cube in Portal 1?</h5>
+			            </div>
+		            </div>
+				</div>
+				<form>
+					<div class="input-field col s6">
+						<div class="card-panel teal">
+					      <input id="answer4-input" type="text" placeholder="Type your answer here">
+					      <label class="active" for="answer4-input">Answer:</label>
+					      <button type="submit" id="answer4-button" class="waves-effect waves-light btn">Submit</button>
+					    </div>
+				    </div>
+				</form>
+			</div>
+		</div>
+		<!-- Results 4 correct Start -->
+			<div id="result4correct" class="row results">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/correct.png">
+			              <span class="card-title">Results</span>
+			            </div>
+			            <div class="card-content">
+								<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer4"></span></h5>
+								<h5 class="orange-text text-accent-4">Your answer was <span class="green-text">CORRECT!</span></h5>
+								<button type="submit" id="continuecorrect4" class="waves-effect waves-light btn">Continue</button>
+							</div>
+			            </div>
+			        </div>
+			</div>
+
+		<!-- Results 4 correct End -->
+		<!-- Results 4 incorrect Start -->
+			<div id="result4incorrect" class="row results">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/wrong.png">
+			              <span class="card-title">Results</span>
+			            </div>
+			            <div class="card-content">
+								<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer4"></span></h5>
+								<h5 class="orange-text text-accent-4">Your answer was <span class="red-text">INCORRECT!</span></h5>
+								<button type="submit" id="continueincorrect4" class="waves-effect waves-light btn">Continue</button>
+							</div>
+			            </div>
+			        </div>		
+			</div>
+		<!-- Results 4 incorrect End -->
+		<!-- Question 4 End -->
+
+		<!-- Question 5 Start -->
+		<div id="question5" class="row questions">
+			<div class="row">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/wheatley.jpg">
+			              <span class="card-title">Qustion 5</span>
+			            </div>
+			            <div class="card-content">
+			              <h5>5. In the beginning of Portal 2, what is the name of the robotic character who wakes you up?</h5>
+			            </div>
+		            </div>
+				</div>
+				<form>
+					<div class="input-field col s6">
+						<div class="card-panel teal">
+					      <input id="answer5-input" type="text" placeholder="Type your answer here">
+					      <label class="active" for="answer5-input">Answer:</label>
+					      <button type="submit" id="answer5-button" class="waves-effect waves-light btn">Submit</button>
+					    </div>
+				    </div>
+				</form>
+			</div>
+		</div>
+		<!-- Results 5 correct Start -->
+			<div id="result5correct" class="row results">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/correct.png">
+			              <span class="card-title">Results</span>
+			            </div>
+			            <div class="card-content">
+								<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer5"></span></h5>
+								<h5 class="orange-text text-accent-5">Your answer was <span class="green-text">CORRECT!</span></h5>
+								<button type="submit" id="continuecorrect5" class="waves-effect waves-light btn">Continue</button>
+							</div>
+			            </div>
+			        </div>
+			</div>
+
+		<!-- Results 5 correct End -->
+		<!-- Results 5 incorrect Start -->
+			<div id="result5incorrect" class="row results">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/wrong.png">
+			              <span class="card-title">Results</span>
+			            </div>
+			            <div class="card-content">
+								<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer5"></span></h5>
+								<h5 class="orange-text text-accent-5">Your answer was <span class="red-text">INCORRECT!</span></h5>
+								<button type="submit" id="continueincorrect5" class="waves-effect waves-light btn">Continue</button>
+							</div>
+			            </div>
+			        </div>		
+			</div>
+		<!-- Results 5 incorrect End -->
+		<!-- Question 5 End -->
+
+		<!-- Question 6 Start -->
+		<div id="question6" class="row questions">
+			<div class="row">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/apple.png">
+			              <span class="card-title">Qustion 6</span>
+			            </div>
+			            <div class="card-content">
+			              <h5>6. What does this character instruct you to say?</h5>
+			            </div>
+		            </div>
+				</div>
+				<form>
+					<div class="input-field col s6">
+						<div class="card-panel teal">
+					      <input id="answer6-input" type="text" placeholder="Type your answer here">
+					      <label class="active" for="answer6-input">Answer:</label>
+					      <button type="submit" id="answer6-button" class="waves-effect waves-light btn">Submit</button>
+					    </div>
+				    </div>
+				</form>
+			</div>
+		</div>
+		<!-- Results 6 correct Start -->
+			<div id="result6correct" class="row results">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/correct.png">
+			              <span class="card-title">Results</span>
+			            </div>
+			            <div class="card-content">
+								<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer6"></span></h5>
+								<h5 class="orange-text text-accent-5">Your answer was <span class="green-text">CORRECT!</span></h5>
+								<button type="submit" id="continuecorrect6" class="waves-effect waves-light btn">Continue</button>
+							</div>
+			            </div>
+			        </div>
+			</div>
+
+		<!-- Results 6 correct End -->
+		<!-- Results 6 incorrect Start -->
+			<div id="result6incorrect" class="row results">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/wrong.png">
+			              <span class="card-title">Results</span>
+			            </div>
+			            <div class="card-content">
+								<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer6"></span></h5>
+								<h5 class="orange-text text-accent-5">Your answer was <span class="red-text">INCORRECT!</span></h5>
+								<button type="submit" id="continueincorrect6" class="waves-effect waves-light btn">Continue</button>
+							</div>
+			            </div>
+			        </div>		
+			</div>
+		<!-- Results 6 incorrect End -->
+		<!-- Question 6 End -->
+
+		<!-- Question 7 Start -->
+		<div id="question7" class="row questions">
+			<div class="row">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/angrywheatley.jpg">
+			              <span class="card-title">Qustion 7</span>
+			            </div>
+			            <div class="card-content">
+			              <h5>7. What is the name of the final chapter in Portal 2?</h5>
+			            </div>
+		            </div>
+				</div>
+				<form>
+					<div class="input-field col s6">
+						<div class="card-panel teal">
+					      <input id="answer7-input" type="text" placeholder="Type your answer here">
+					      <label class="active" for="answer7-input">Answer:</label>
+					      <button type="submit" id="answer7-button" class="waves-effect waves-light btn">Submit</button>
+					    </div>
+				    </div>
+				</form>
+			</div>
+		</div>
+		<!-- Results 7 correct Start -->
+			<div id="result7correct" class="row results">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/correct.png">
+			              <span class="card-title">Results</span>
+			            </div>
+			            <div class="card-content">
+								<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer7"></span></h5>
+								<h5 class="orange-text text-accent-5">Your answer was <span class="green-text">CORRECT!</span></h5>
+								<button type="submit" id="continuecorrect7" class="waves-effect waves-light btn">Continue</button>
+							</div>
+			            </div>
+			        </div>
+			</div>
+
+		<!-- Results 7 correct End -->
+		<!-- Results 7 incorrect Start -->
+			<div id="result7incorrect" class="row results">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/wrong.png">
+			              <span class="card-title">Results</span>
+			            </div>
+			            <div class="card-content">
+								<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer7"></span></h5>
+								<h5 class="orange-text text-accent-5">Your answer was <span class="red-text">INCORRECT!</span></h5>
+								<button type="submit" id="continueincorrect7" class="waves-effect waves-light btn">Continue</button>
+							</div>
+			            </div>
+			        </div>		
+			</div>
+		<!-- Results 7 incorrect End -->
+		<!-- Question 7 End -->
+
+		<!-- Question 8 Start -->
+		<div id="question8" class="row questions">
+			<div class="row">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/rick.jpg">
+			              <span class="card-title">Qustion 8</span>
+			            </div>
+			            <div class="card-content">
+			              <h5>8. What is the name of the green corrupt core (aka the adventure sphere)?</h5>
+			            </div>
+		            </div>
+				</div>
+				<form>
+					<div class="input-field col s6">
+						<div class="card-panel teal">
+					      <input id="answer8-input" type="text" placeholder="Type your answer here">
+					      <label class="active" for="answer8-input">Answer:</label>
+					      <button type="submit" id="answer8-button" class="waves-effect waves-light btn">Submit</button>
+					    </div>
+				    </div>
+				</form>
+			</div>
+		</div>
+		<!-- Results 8 correct Start -->
+			<div id="result8correct" class="row results">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/correct.png">
+			              <span class="card-title">Results</span>
+			            </div>
+			            <div class="card-content">
+								<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer8"></span></h5>
+								<h5 class="orange-text text-accent-5">Your answer was <span class="green-text">CORRECT!</span></h5>
+								<button type="submit" id="continuecorrect8" class="waves-effect waves-light btn">Continue</button>
+							</div>
+			            </div>
+			        </div>
+			</div>
+
+		<!-- Results 8 correct End -->
+		<!-- Results 8 incorrect Start -->
+			<div id="result8incorrect" class="row results">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/wrong.png">
+			              <span class="card-title">Results</span>
+			            </div>
+			            <div class="card-content">
+								<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer8"></span></h5>
+								<h5 class="orange-text text-accent-5">Your answer was <span class="red-text">INCORRECT!</span></h5>
+								<button type="submit" id="continueincorrect8" class="waves-effect waves-light btn">Continue</button>
+							</div>
+			            </div>
+			        </div>		
+			</div>
+		<!-- Results 8 incorrect End -->
+		<!-- Question 8 End -->
+
+		<!-- Question 9 Start -->
+		<div id="question9" class="row questions">
+			<div class="row">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/stillalive.jpg">
+			              <span class="card-title">Qustion 9</span>
+			            </div>
+			            <div class="card-content">
+			              <h5>9. What is the name of the credits song in Portal 1?</h5>
+			            </div>
+		            </div>
+				</div>
+				<form>
+					<div class="input-field col s6">
+						<div class="card-panel teal">
+					      <input id="answer9-input" type="text" placeholder="Type your answer here">
+					      <label class="active" for="answer9-input">Answer:</label>
+					      <button type="submit" id="answer9-button" class="waves-effect waves-light btn">Submit</button>
+					    </div>
+				    </div>
+				</form>
+			</div>
+		</div>
+		<!-- Results 9 correct Start -->
+			<div id="result9correct" class="row results">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/correct.png">
+			              <span class="card-title">Results</span>
+			            </div>
+			            <div class="card-content">
+								<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer9"></span></h5>
+								<h5 class="orange-text text-accent-5">Your answer was <span class="green-text">CORRECT!</span></h5>
+								<button type="submit" id="continuecorrect9" class="waves-effect waves-light btn">Continue</button>
+							</div>
+			            </div>
+			        </div>
+			</div>
+
+		<!-- Results 9 correct End -->
+		<!-- Results 9 incorrect Start -->
+			<div id="result9incorrect" class="row results">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/wrong.png">
+			              <span class="card-title">Results</span>
+			            </div>
+			            <div class="card-content">
+								<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer9"></span></h5>
+								<h5 class="orange-text text-accent-5">Your answer was <span class="red-text">INCORRECT!</span></h5>
+								<button type="submit" id="continueincorrect9" class="waves-effect waves-light btn">Continue</button>
+							</div>
+			            </div>
+			        </div>		
+			</div>
+		<!-- Results 9 incorrect End -->
+		<!-- Question 9 End -->
+
+		<!-- Question 10 Start -->
+		<div id="question10" class="row questions">
+			<div class="row">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/wantyougone.jpg">
+			              <span class="card-title">Qustion 10</span>
+			            </div>
+			            <div class="card-content">
+			              <h5>10. What is the name of the credits song in Portal 2?</h5>
+			            </div>
+		            </div>
+				</div>
+				<form>
+					<div class="input-field col s6">
+						<div class="card-panel teal">
+					      <input id="answer10-input" type="text" placeholder="Type your answer here">
+					      <label class="active" for="answer10-input">Answer:</label>
+					      <button type="submit" id="answer10-button" class="waves-effect waves-light btn">Submit</button>
+					    </div>
+				    </div>
+				</form>
+			</div>
+		</div>
+		<!-- Results 10 correct Start -->
+			<div id="result10correct" class="row results">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/correct.png">
+			              <span class="card-title">Results</span>
+			            </div>
+			            <div class="card-content">
+								<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer10"></span></h5>
+								<h5 class="orange-text text-accent-5">Your answer was <span class="green-text">CORRECT!</span></h5>
+								<button type="submit" id="continuecorrect10" class="waves-effect waves-light btn">Continue</button>
+							</div>
+			            </div>
+			        </div>
+			</div>
+
+		<!-- Results 10 correct End -->
+		<!-- Results 10 incorrect Start -->
+			<div id="result10incorrect" class="row results">
+				<div class="col s6">
+					<div class="card medium">
+			            <div class="card-image">
+			              <img src="img/wrong.png">
+			              <span class="card-title">Results</span>
+			            </div>
+			            <div class="card-content">
+								<h5 class="light-blue-text text-darken-1">You answered: <span class="show-answer10"></span></h5>
+								<h5 class="orange-text text-accent-5">Your answer was <span class="red-text">INCORRECT!</span></h5>
+								<button type="submit" id="continueincorrect10" class="waves-effect waves-light btn">Continue</button>
+							</div>
+			            </div>
+			        </div>		
+			</div>
+		<!-- Results 10 incorrect End -->
+		<!-- Question 10 End -->
+
+		<!-- Turret Win -->
+		<div id="turret" class = "row win-img">
+			<div class="card">
+	            <div class="card-image">
+	              <img src="img/turretwin.jpg">
+	              <span class="card-title">YOU WON</span>
+	            </div>
+	            <div class="card-content">
+	              <h5>THIS WAS A TRIUMPH!</h5>
+	              <h5>Your rank: TURRET</h5>
+	              <h5>"The ultimate in lowly military androids."</h5>
+	            </div>
+	        </div>
+        </div>
+        <!-- Wheatley end-->
+
+        <!-- Cube Win -->
+		<div id="cube" class = "row win-img">
+			<div class="card">
+	            <div class="card-image">
+	              <img src="img/cubewin.jpg">
+	              <span class="card-title">YOU WON</span>
+	            </div>
+	            <div class="card-content">
+	              <h5>THIS WAS A TRIUMPH!</h5>
+	              <h5>Your rank: COMPANION CUBE</h5>
+	              <h5>"Friends till the end."</h5>
+	            </div>
+	        </div>
+        </div>
+        <!-- Cube end-->
+
+        <!-- Cake Win -->
+		<div id="cake" class = "row win-img">
+			<div class="card">
+	            <div class="card-image">
+	              <img src="img/cakewin.jpg">
+	              <span class="card-title">YOU WON</span>
+	            </div>
+	            <div class="card-content">
+	              <h5>THIS WAS A TRIUMPH!</h5>
+	              <h5>Your rank: THE CAKE</h5>
+	              <h5>"Congratulations. You earned it."</h5>
+	            </div>
+	        </div>
+        </div>
+        <!-- Cube end-->
+		<!-- Put win message HERE -->
+		<div class="row">
+			<div id="lose-msg" class="col s12 winlose">
+				<h3 class="red-text">YOU LOSE</h3>
+			</div>
+		</div>
+
 	</div> <!-- Container End -->
 
  </main>

@@ -10,6 +10,9 @@ $(document).ready(function() {
 	var answer3 = "";
 	var trueanswer3 = "";
 	var correct3 = "ellen mclain";
+	var answer4 = "";
+	var trueanswer4= "";
+	var correct4 = "fratricide";
 	var score = 0;
 	var lives = 3;
 
@@ -35,6 +38,8 @@ $(document).ready(function() {
 	function showPlayerName(){
 		$("#dashboard").show().addClass("animated flipInX");
 	}
+
+	//***********QUESTION 1 FUNCTIONS************//
 
 	function showquestion1(){
 		$("#question1").show().addClass("animated flipInX")
@@ -76,6 +81,8 @@ $(document).ready(function() {
 	function removeincorrect1(){
 		$("#result1incorrect").detach();
 	}
+
+	//***********QUESTION 2 FUNCTIONS************//
 
 	function showquestion2(){
 		$("#question2").show().addClass("animated flipInX");
@@ -119,6 +126,8 @@ $(document).ready(function() {
 	}
 
 
+	//***********QUESTION 3 FUNCTIONS************//
+
 	function showquestion3(){
 		$("#question3").show().addClass("animated flipInX");
 		$("#answer3-input").focus();
@@ -152,6 +161,102 @@ $(document).ready(function() {
 		}
 	}
 
+	function removecorrect3(){
+		$("#result3correct").detach();
+	}
+
+	function removeincorrect3(){
+		$("#result3incorrect").detach();
+	}
+
+
+	//***********QUESTION 4 FUNCTIONS************//
+
+	function showquestion4(){
+		$("#question4").show().addClass("animated flipInX");
+		$("#answer4-input").focus();
+	}
+
+	function removequestion4(){
+		$("#question4").detach();
+	}
+
+	function answerCheck4(){
+		if(trueanswer4 === correct4){
+			console.log("player answer 4 is correct");
+			$("#result4correct").show().addClass("animated flipInX");
+			score++;
+			$("#score").text(score);
+		}
+		else{
+			console.log("player answer 4 is incorrect");
+			loselife4();
+		}
+	}
+
+	function loselife4(){
+		lives--;
+		$("#lifecounter").text(lives);
+		if(lives === 0){
+			$("#lose-msg").show().addClass("animated flipInX");
+		}
+		else{
+			$("#result4incorrect").show().addClass("animated flipInX");
+		}
+	}
+
+	function removecorrect4(){
+		$("#result4correct").detach();
+	}
+
+	function removeincorrect4(){
+		$("#result4incorrect").detach();
+	}
+
+	//***********QUESTION 5 FUNCTIONS************//
+
+	function showquestion5(){
+		$("#question5").show().addClass("animated flipInX");
+		$("#answer5-input").focus();
+	}
+
+	function removequestion5(){
+		$("#question5").detach();
+	}
+
+	function answerCheck5(){
+		if(trueanswer5 === correct5){
+			console.log("player answer 5 is correct");
+			$("#result5correct").show().addClass("animated flipInX");
+			score++;
+			$("#score").text(score);
+		}
+		else{
+			console.log("player answer 5 is incorrect");
+			loselife5();
+		}
+	}
+
+	function loselife5(){
+		lives--;
+		$("#lifecounter").text(lives);
+		if(lives === 0){
+			$("#lose-msg").show().addClass("animated flipInX");
+		}
+		else{
+			$("#result5incorrect").show().addClass("animated flipInX");
+		}
+	}
+
+	function removecorrect5(){
+		$("#result5correct").detach();
+	}
+
+	function removeincorrect5(){
+		$("#result5incorrect").detach();
+	}
+
+
 	//on submit button click
 	$("#submit-button").on("click", function(e) { //when #submit-button is clicked, initiate this function
 		e.preventDefault(); //prevent default action
@@ -163,6 +268,8 @@ $(document).ready(function() {
 		setTimeout(showPlayerName, 1900); //initiate function showPlayerName after 1.9 seconds
 		setTimeout(showquestion1, 2200); //initiate function showquestion1 after 2.2 seconds
 	});
+
+	//*********QUESTION 1***********//
 
 	//on answer1 button click
 	$("#answer1-button").on("click", function(e) { //when #answer1-button is clicked, initiate this function
@@ -193,6 +300,8 @@ $(document).ready(function() {
 		setTimeout(showquestion2, 1500);
 	});
 
+	//*********QUESTION 2***********//
+
 	//on answer2 button click
 	$("#answer2-button").on("click", function(e) { //when #answer1-button is clicked, initiate this function
 		e.preventDefault(); //prevent default action
@@ -220,6 +329,8 @@ $(document).ready(function() {
 		setTimeout(showquestion3, 1500);
 	});
 
+	//*********QUESTION 3***********//
+
 	//on answer3 button click
 	$("#answer3-button").on("click", function(e) { //when #answer1-button is clicked, initiate this function
 		e.preventDefault(); //prevent default action
@@ -233,6 +344,51 @@ $(document).ready(function() {
 		setTimeout(answerCheck3, 1500); 
 	});
 
+	//on continuecorrect3 button click
+	$("#continuecorrect3").on("click", function(e) {
+		e.preventDefault();
+		$("#result3correct").addClass("flipOutX");
+		setTimeout(removecorrect3, 1000);
+		setTimeout(showquestion4, 1500);
+	});
 
+	//on continueincorrect3 button click
+	$("#continueincorrect3").on("click", function(e) {
+		e.preventDefault();
+		$("#result3incorrect").addClass("flipOutX");
+		setTimeout(removeincorrect3, 1000);
+		setTimeout(showquestion4, 1500);
+	});
+
+	//*********QUESTION 4***********//
+
+	//on answer4 button click
+	$("#answer4-button").on("click", function(e) { 
+		e.preventDefault(); 
+		trueanswer4 = $("#answer4-input").val().trim().toLowerCase();  
+		answer4 = $("#answer4-input").val().trim()
+		console.log("Player answer is " + answer4)
+		console.log("True answer 4 is " + trueanswer4); 
+		$(".show-answer4").text(answer4);
+		$("#question4").addClass("flipOutX");
+		setTimeout(removequestion4, 1000);
+		setTimeout(answerCheck4, 1500); 
+	});
+
+	//on continuecorrect4 button click
+	$("#continuecorrect4").on("click", function(e) {
+		e.preventDefault();
+		$("#result4correct").addClass("flipOutX");
+		setTimeout(removecorrect4, 1000);
+		setTimeout(showquestion4, 1500);
+	});
+
+	//on continueincorrect4 button click
+	$("#continueincorrect4").on("click", function(e) {
+		e.preventDefault();
+		$("#result4incorrect").addClass("flipOutX");
+		setTimeout(removeincorrect4, 1000);
+		setTimeout(showquestion5, 1500);
+	});
 
 });

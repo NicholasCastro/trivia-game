@@ -9,3 +9,25 @@ body
 	width: 1030px;
 	background-image: url(../img/logo.png);
 }
+
+#glados-img
+{
+	height: 300px;
+	width:250px;
+	background-image: url(../img/gladosbg.png);
+	float: left;
+}
+
+#space-img
+{
+	height: 100px;
+	width: 300px;
+	background-image: url(../img/space.png);
+	float: right;
+}
+
+.container
+{
+	float: right;
+	margin-right: 180px;
+}

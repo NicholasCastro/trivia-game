@@ -32,7 +32,7 @@ $(document).ready(function() {
 	var trueanswer10 = "";
 	var correct10 = "want you gone";
 	var score = 0;
-	var lives = 3;
+	var lives = 6;
 
 	//hide questions
 	$(".questions").hide();
@@ -493,8 +493,17 @@ $(document).ready(function() {
 
 	//***************Win Functions*******************//
 	function win(){
-		if(score === 8){
+		if(score === 5){
+			$("#wheatley").show().addClass("animated flipInX");
+		}
+		if(score === 6){
 			$("#turret").show().addClass("animated flipInX");
+		}
+		if(score === 7){
+			$("#cave").show().addClass("animated flipInX");
+		}
+		if(score === 8){
+			$("#glados").show().addClass("animated flipInX");
 		}
 		if(score === 9){
 			$("#cube").show().addClass("animated flipInX");

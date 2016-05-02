@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
 	//set variables
+	//Enjoy the answers, YOU CHEATER!!!!!!!!!!!!!!!!!
 	var playerName = "";
 	var answer1 = "";
 	var trueanswer1 = "";
@@ -833,4 +834,8 @@ $(document).ready(function() {
 		setTimeout(win, 1500);
 	});
 
+	//****************Reset Button****************//
+	$(".reset-btn").on("click", function(){
+		location.reload();
+	});
 });

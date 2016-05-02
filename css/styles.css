@@ -18,16 +18,8 @@ body
 	float: left;
 }
 
-#space-img
-{
-	height: 100px;
-	width: 300px;
-	background-image: url(../img/space.png);
-	float: right;
-}
-
 .container
 {
 	float: right;
-	margin-right: 180px;
+	margin-right: 140px;
 }
